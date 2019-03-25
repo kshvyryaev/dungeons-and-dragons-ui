@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Удаление персонажа</h1>
+
+<div mat-dialog-content class="dialog-content">
+  Вы действительно хотите удалить <strong>{{removeDialogItem.name}}</strong>?
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button class="dialog-actions__button_margin" mat-button [mat-dialog-close]="false">Отмена</button>
+  <button class="dialog-actions__button_margin" mat-raised-button color="primary" (click)="onOkClick()">Удалить</button>
+</div>

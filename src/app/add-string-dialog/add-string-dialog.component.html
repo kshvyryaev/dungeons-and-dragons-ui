@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>{{addStringDialogItem.title}}</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <form [formGroup]="elementForm">
+    <mat-form-field class="form-field_full-width">
+      <textarea matInput placeholder="Название" [(ngModel)]="element"
+        formControlName="name" required>
+      </textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button class="dialog-actions__button_margin" mat-button mat-dialog-close>Отмена</button>
+  <button class="dialog-actions__button_margin" mat-raised-button color="primary"
+    (click)="addElement()" [disabled]="!elementForm.valid">Добавить</button>
+</div>

@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Добавление снаряжения</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <form [formGroup]="equipmentForm">
+    <mat-form-field class="form-field_full-width">
+      <textarea matInput placeholder="Название" [(ngModel)]="equipment.name"
+        formControlName="name" required>
+      </textarea>
+    </mat-form-field>
+
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Количество" type="number" [(ngModel)]="equipment.total"
+        formControlName="total" required>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button class="dialog-actions__button_margin" mat-button mat-dialog-close>Отмена</button>
+  <button class="dialog-actions__button_margin" mat-raised-button color="primary"
+    (click)="addEquipment()" [disabled]="!equipmentForm.valid">Добавить</button>
+</div>

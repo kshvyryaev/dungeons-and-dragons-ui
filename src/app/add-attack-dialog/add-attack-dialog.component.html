@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Добавление атаки</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <form [formGroup]="attackForm">
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Название" [(ngModel)]="attack.name"
+        formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Бонус" type="number" [(ngModel)]="attack.bonus"
+        formControlName="bonus" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Урон" type="number" [(ngModel)]="attack.damage"
+        formControlName="damage" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Тип" [(ngModel)]="attack.type"
+      formControlName="type" required>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button class="dialog-actions__button_margin" mat-button mat-dialog-close>Отмена</button>
+  <button class="dialog-actions__button_margin" mat-raised-button color="primary"
+    (click)="addAttack()" [disabled]="!attackForm.valid">Добавить</button>
+</div>

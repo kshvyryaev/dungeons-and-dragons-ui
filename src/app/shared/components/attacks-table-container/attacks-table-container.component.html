@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="elements-container">
+    <table #attacksTable class="table" mat-table [dataSource]="attacks">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Название</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="table__td_overflow">
+            {{element.name}}
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="bonus">
+        <th mat-header-cell *matHeaderCellDef>Бонус</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="table__td_overflow">
+            {{element.bonus}}
+          </div>
+        </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="damage">
+        <th mat-header-cell *matHeaderCellDef>Урон</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="table__td_overflow">
+            {{element.damage}}
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Тип</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="table__td_overflow">
+            {{element.type}}
+          </div>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="options">
+        <th mat-header-cell *matHeaderCellDef>Опции</th>
+        <td mat-cell *matCellDef="let element">
+          <button (click)="removeAttack(element)" mat-mini-fab color="warn" class="table__button-margin">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['name', 'bonus', 'damage', 'type', 'options']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['name', 'bonus', 'damage', 'type', 'options'];"></tr>
+    </table>
+  </div>
+
+  <div class="button-container">
+    <button class="button-container__button_margin" mat-button color="primary"
+      (click)="addAttack()">
+      <i class="material-icons">add</i>
+    </button>
+  </div>
+</div>
