@@ -31,49 +31,13 @@
     </mat-step>
     
     <mat-step [stepControl]="fourthStepForm">
-      <form [formGroup]="fourthStepForm">
-        <ng-template matStepLabel>Характеристики</ng-template>
-        <div class="form-field-container">
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Сила" type="number" formControlName="strength"
-              [(ngModel)]="character.characteristics.strength" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Телосложение" type="number" formControlName="constitution"
-              [(ngModel)]="character.characteristics.constitution" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Ловкость" type="number" formControlName="dexterity"
-              [(ngModel)]="character.characteristics.dexterity" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Интеллект" type="number" formControlName="intelligence"
-              [(ngModel)]="character.characteristics.intelligence" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Мудрость" type="number" formControlName="wisdom"
-              [(ngModel)]="character.characteristics.wisdom" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Обаяние" type="number" formControlName="charisma"
-              [(ngModel)]="character.characteristics.charisma" required>
-          </mat-form-field>
-
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Вдохновение" type="number" formControlName="inspiration"
-              [(ngModel)]="character.inspiration" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Бонус мастерства" type="number" formControlName="proficiencyBonus"
-              [(ngModel)]="character.proficiencyBonus" required>
-          </mat-form-field>
-
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Пассивная мудрость" type="number" formControlName="passiveWisdom"
-              [(ngModel)]="character.passiveWisdom" required>
-          </mat-form-field>
-        </div>
-      </form>
+      <app-character-characteristics-form
+        [formGroup]="fourthStepForm"
+        [(characteristics)]="character.characteristics"
+        [(inspiration)]="character.inspiration"
+        [(proficiencyBonus)]="character.proficiencyBonus"
+        [(passiveWisdom)]="character.passiveWisdom">
+      </app-character-characteristics-form>
 
       <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>

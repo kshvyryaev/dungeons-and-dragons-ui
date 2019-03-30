@@ -1,0 +1,43 @@
+<form [formGroup]="formGroup">
+  <ng-template matStepLabel>Характеристики</ng-template>
+  <div class="form-field-container">
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Сила" type="number" formControlName="strength" required
+        [ngModel]="characteristics.strength" (ngModelChange)="onStrengthChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Телосложение" type="number" formControlName="constitution" required
+        [ngModel]="characteristics.constitution" (ngModelChange)="onConstitutionChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Ловкость" type="number" formControlName="dexterity" required
+        [ngModel]="characteristics.dexterity" (ngModelChange)="onDexterityChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Интеллект" type="number" formControlName="intelligence" required
+        [ngModel]="characteristics.intelligence" (ngModelChange)="onIntelligenceChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Мудрость" type="number" formControlName="wisdom" required
+        [ngModel]="characteristics.wisdom" (ngModelChange)="onWisdomChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Обаяние" type="number" formControlName="charisma" required
+        [ngModel]="characteristics.charisma" (ngModelChange)="onCharismaChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Вдохновение" type="number" formControlName="inspiration" required
+        [ngModel]="inspiration" (ngModelChange)="onInspirationChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Бонус мастерства" type="number" formControlName="proficiencyBonus" required
+        [ngModel]="proficiencyBonus" (ngModelChange)="onProficiencyBonusChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Пассивная мудрость" type="number" formControlName="passiveWisdom" required
+        [ngModel]="passiveWisdom" (ngModelChange)="onPassiveWisdomChange($event)">
+    </mat-form-field>
+  </div>
+</form>

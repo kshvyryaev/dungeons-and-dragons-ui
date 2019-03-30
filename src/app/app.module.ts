@@ -30,6 +30,7 @@ import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons
 import { CharacterNameFormComponent } from './children/forms/character-name-form/character-name-form.component';
 import { CharacterGameStateFormComponent } from './children/forms/character-game-state-form/character-game-state-form.component';
 import { CharacterDescriptionFormComponent } from './children/forms/character-description-form/character-description-form.component';
+import { CharacterCharacteristicsFormComponent } from './children/forms/character-characteristics-form/character-characteristics-form.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { CharacterDescriptionFormComponent } from './children/forms/character-de
     StepperMiddleButtonsComponent,
     CharacterNameFormComponent,
     CharacterGameStateFormComponent,
-    CharacterDescriptionFormComponent
+    CharacterDescriptionFormComponent,
+    CharacterCharacteristicsFormComponent
   ],
   entryComponents: [
     // Dialogs
