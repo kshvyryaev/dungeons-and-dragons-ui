@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatDialog, MatTable } from '@angular/material';
 import { Equipment } from '../../entities/equipment';
 import { EquipmentEqualsHelper } from '../../helpers/equals-helpers/equipmentEqualsHelper';
-import { AddEquipmentDialogComponent } from 'src/app/add-equipment-dialog/add-equipment-dialog.component';
+import { AddEquipmentDialogComponent } from 'src/app/dialogs/add-equipment-dialog/add-equipment-dialog.component';
 
 @Component({
   selector: 'app-equipment-table-container',

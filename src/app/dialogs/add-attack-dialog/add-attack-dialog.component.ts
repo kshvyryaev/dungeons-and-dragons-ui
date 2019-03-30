@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
-import { Attack } from '../shared/entities/attack';
-import { AttackFormFactory } from '../shared/factories/form-factories/attackFormFactory';
+import { Attack } from 'src/app/shared/entities/attack';
+import { AttackFormFactory } from 'src/app/shared/factories/form-factories/attackFormFactory';
 
 @Component({
   selector: 'app-add-attack-dialog',

@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { RemoveDialogItem } from '../shared/entities/dialog-entities/removeDialogItem';
-import { CharactersService } from '../shared/services/characters.service';
+import { RemoveDialogItem } from 'src/app/shared/entities/dialog-entities/removeDialogItem';
+import { CharactersService } from 'src/app/shared/services/characters.service';
 
 @Component({
   selector: 'app-remove-character-dialog',

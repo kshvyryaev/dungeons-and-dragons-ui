@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialogRef, MatDialog, MatTable } from '@angular/material';
+import { MatDialogRef, MatTable } from '@angular/material';
 import { FormGroup } from '@angular/forms';
-import { Character } from '../shared/entities/character';
-import { CharacterFormFactory } from '../shared/factories/form-factories/characterFormFactory';
-import { CharactersService } from '../shared/services/characters.service';
-import { Attack } from '../shared/entities/attack';
+import { Character } from 'src/app/shared/entities/character';
+import { CharacterFormFactory } from 'src/app/shared/factories/form-factories/characterFormFactory';
+import { CharactersService } from 'src/app/shared/services/characters.service';
+import { Attack } from 'src/app/shared/entities/attack';
 
 @Component({
   selector: 'app-add-character-dialog',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
-import { Equipment } from '../shared/entities/equipment';
-import { EquipmentFormFactory } from '../shared/factories/form-factories/equipmentFormFactory';
+import { Equipment } from 'src/app/shared/entities/equipment';
+import { EquipmentFormFactory } from 'src/app/shared/factories/form-factories/equipmentFormFactory';
 
 @Component({
   selector: 'app-add-equipment-dialog',

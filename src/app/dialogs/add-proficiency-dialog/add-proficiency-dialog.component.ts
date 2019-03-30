@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material';
-import { Proficiency } from '../shared/entities/proficiency';
-import { ProficiencyFormFactory } from '../shared/factories/form-factories/proficiencyFormFactory';
+import { Proficiency } from 'src/app/shared/entities/proficiency';
+import { ProficiencyFormFactory } from 'src/app/shared/factories/form-factories/proficiencyFormFactory';
 
 @Component({
   selector: 'app-add-proficiency-dialog',

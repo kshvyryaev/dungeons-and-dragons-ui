@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatDialog, MatTable } from '@angular/material';
 import { Attack } from '../../entities/attack';
 import { AttacksEqualsHelper } from '../../helpers/equals-helpers/attacksEqualsHelper';
-import { AddAttackDialogComponent } from 'src/app/add-attack-dialog/add-attack-dialog.component';
+import { AddAttackDialogComponent } from 'src/app/dialogs/add-attack-dialog/add-attack-dialog.component';
 
 @Component({
   selector: 'app-attacks-table-container',

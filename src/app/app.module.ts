@@ -14,12 +14,12 @@ import { CharacterPageComponent } from './character-page/character-page.componen
 import { NavbarComponent } from './navbar/navbar.component';
 
 // Dialogs
-import { AddCharacterDialogComponent } from './add-character-dialog/add-character-dialog.component';
-import { AddAttackDialogComponent } from './add-attack-dialog/add-attack-dialog.component';
-import { AddStringDialogComponent } from './add-string-dialog/add-string-dialog.component';
-import { AddProficiencyDialogComponent } from './add-proficiency-dialog/add-proficiency-dialog.component';
-import { AddEquipmentDialogComponent } from './add-equipment-dialog/add-equipment-dialog.component';
-import { RemoveCharacterDialogComponent } from './remove-character-dialog/remove-character-dialog.component';
+import { AddCharacterDialogComponent } from './dialogs/add-character-dialog/add-character-dialog.component';
+import { AddAttackDialogComponent } from './dialogs/add-attack-dialog/add-attack-dialog.component';
+import { AddStringDialogComponent } from './dialogs/add-string-dialog/add-string-dialog.component';
+import { AddProficiencyDialogComponent } from './dialogs/add-proficiency-dialog/add-proficiency-dialog.component';
+import { AddEquipmentDialogComponent } from './dialogs/add-equipment-dialog/add-equipment-dialog.component';
+import { RemoveCharacterDialogComponent } from './dialogs/remove-character-dialog/remove-character-dialog.component';
 
 // Shared
 import { AttacksTableContainerComponent } from './shared/components/attacks-table-container/attacks-table-container.component';

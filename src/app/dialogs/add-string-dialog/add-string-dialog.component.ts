@@ -1,8 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { StringFormFactory } from '../shared/factories/form-factories/stringFormFactory';
-import { AddStringDialogItem } from '../shared/entities/dialog-entities/addStringDialogItem';
+import { AddStringDialogItem } from 'src/app/shared/entities/dialog-entities/addStringDialogItem';
+import { StringFormFactory } from 'src/app/shared/factories/form-factories/stringFormFactory';
 
 @Component({
   selector: 'app-add-string-dialog',

@@ -4,8 +4,8 @@ import { MatTable, MatPaginator, MatTableDataSource, MatDialog } from '@angular/
 import { Character } from '../shared/entities/character';
 import { CharactersEqualsHelper } from '../shared/helpers/equals-helpers/charactersEqualsHelper';
 import { CharactersService } from '../shared/services/characters.service';
-import { AddCharacterDialogComponent } from '../add-character-dialog/add-character-dialog.component';
-import { RemoveCharacterDialogComponent } from '../remove-character-dialog/remove-character-dialog.component';
+import { AddCharacterDialogComponent } from '../dialogs/add-character-dialog/add-character-dialog.component';
+import { RemoveCharacterDialogComponent } from '../dialogs/remove-character-dialog/remove-character-dialog.component';
 
 @Component({
   selector: 'app-characters-page',

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatTable, MatDialog } from '@angular/material';
-import { AddStringDialogComponent } from 'src/app/add-string-dialog/add-string-dialog.component';
+import { AddStringDialogComponent } from 'src/app/dialogs/add-string-dialog/add-string-dialog.component';
 
 @Component({
   selector: 'app-strings-table-container',

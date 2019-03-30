@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatTable, MatDialog } from '@angular/material';
 import { Proficiency } from '../../entities/proficiency';
 import { ProficienciesEqualsHelper } from '../../helpers/equals-helpers/proficienciesEqualsHelper';
-import { AddProficiencyDialogComponent } from 'src/app/add-proficiency-dialog/add-proficiency-dialog.component';
+import { AddProficiencyDialogComponent } from 'src/app/dialogs/add-proficiency-dialog/add-proficiency-dialog.component';
 
 @Component({
   selector: 'app-proficiencies-table-container',
