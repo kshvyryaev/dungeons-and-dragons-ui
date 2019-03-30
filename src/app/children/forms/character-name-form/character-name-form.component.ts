@@ -17,9 +17,9 @@ export class CharacterNameFormComponent implements OnInit {
 
   ngOnInit() { }
 
-  onNameChange(model: string){        
+  public onNameChange(model: string): void {        
     this.name = model;
     this.nameChange.emit(model);
-}
+  }
 
 }

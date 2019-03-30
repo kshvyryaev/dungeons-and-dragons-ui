@@ -4,7 +4,8 @@
   <mat-vertical-stepper [linear]="true" #stepper>
     
     <mat-step [stepControl]="firstStepForm">
-      <app-character-name-form [form]="firstStepForm" [(name)]="character.name">
+      <app-character-name-form
+        [form]="firstStepForm" [(name)]="character.name">
       </app-character-name-form>
 
       <div class="form-button-container">
@@ -14,35 +15,9 @@
     </mat-step>
 
     <mat-step [stepControl]="secondStepForm">
-      <form [formGroup]="secondStepForm">
-        <ng-template matStepLabel>Игровое состояние</ng-template>
-        <div class="form-field-container">
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Класс" formControlName="class"
-              [(ngModel)]="character.gameState.class" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Уровень" type="number" formControlName="level"
-              [(ngModel)]="character.gameState.level" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Предыстория" formControlName="background"
-              [(ngModel)]="character.gameState.background">
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Фракция" formControlName="faction"
-              [(ngModel)]="character.gameState.faction" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Раса" formControlName="race"
-              [(ngModel)]="character.gameState.race" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Опыт" type="number" formControlName="experiencePoints"
-              [(ngModel)]="character.gameState.experiencePoints">
-          </mat-form-field>
-        </div>
-      </form>
+      <app-character-game-state-form
+        [form]="secondStepForm" [(gameState)]="character.gameState">
+      </app-character-game-state-form>
 
       <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
