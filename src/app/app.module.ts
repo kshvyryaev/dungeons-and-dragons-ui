@@ -22,10 +22,10 @@ import { AddEquipmentDialogComponent } from './dialogs/add-equipment-dialog/add-
 import { RemoveCharacterDialogComponent } from './dialogs/remove-character-dialog/remove-character-dialog.component';
 
 // Children
-import { AttacksTableContainerComponent } from './children/attacks-table-container/attacks-table-container.component';
-import { StringsTableContainerComponent } from './children/strings-table-container/strings-table-container.component';
-import { ProficienciesTableContainerComponent } from './children/proficiencies-table-container/proficiencies-table-container.component';
-import { EquipmentTableContainerComponent } from './children/equipment-table-container/equipment-table-container.component';
+import { AttacksTableContainerComponent } from './children/table-containers/attacks-table-container/attacks-table-container.component';
+import { StringsTableContainerComponent } from './children/table-containers/strings-table-container/strings-table-container.component';
+import { ProficienciesTableContainerComponent } from './children/table-containers/proficiencies-table-container/proficiencies-table-container.component';
+import { EquipmentTableContainerComponent } from './children/table-containers/equipment-table-container/equipment-table-container.component';
 import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons/stepper-middle-buttons.component';
 import { CharacterNameFormComponent } from './children/forms/character-name-form/character-name-form.component';
 import { CharacterGameStateFormComponent } from './children/forms/character-game-state-form/character-game-state-form.component';
