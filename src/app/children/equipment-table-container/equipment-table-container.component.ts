@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatDialog, MatTable } from '@angular/material';
-import { Equipment } from '../../entities/equipment';
-import { EquipmentEqualsHelper } from '../../helpers/equals-helpers/equipmentEqualsHelper';
+import { Equipment } from 'src/app/shared/entities/equipment';
+import { EquipmentEqualsHelper } from 'src/app/shared/helpers/equals-helpers/equipmentEqualsHelper';
 import { AddEquipmentDialogComponent } from 'src/app/dialogs/add-equipment-dialog/add-equipment-dialog.component';
 
 @Component({

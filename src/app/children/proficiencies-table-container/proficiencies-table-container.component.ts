@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatTable, MatDialog } from '@angular/material';
-import { Proficiency } from '../../entities/proficiency';
-import { ProficienciesEqualsHelper } from '../../helpers/equals-helpers/proficienciesEqualsHelper';
+import { Proficiency } from 'src/app/shared/entities/proficiency';
+import { ProficienciesEqualsHelper } from 'src/app/shared/helpers/equals-helpers/proficienciesEqualsHelper';
 import { AddProficiencyDialogComponent } from 'src/app/dialogs/add-proficiency-dialog/add-proficiency-dialog.component';
 
 @Component({

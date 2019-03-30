@@ -21,12 +21,12 @@ import { AddProficiencyDialogComponent } from './dialogs/add-proficiency-dialog/
 import { AddEquipmentDialogComponent } from './dialogs/add-equipment-dialog/add-equipment-dialog.component';
 import { RemoveCharacterDialogComponent } from './dialogs/remove-character-dialog/remove-character-dialog.component';
 
-// Shared
-import { AttacksTableContainerComponent } from './shared/components/attacks-table-container/attacks-table-container.component';
-import { StringsTableContainerComponent } from './shared/components/strings-table-container/strings-table-container.component';
-import { ProficienciesTableContainerComponent } from './shared/components/proficiencies-table-container/proficiencies-table-container.component';
-import { EquipmentTableContainerComponent } from './shared/components/equipment-table-container/equipment-table-container.component';
-import { StepperMiddleButtonsComponent } from './shared/components/stepper-middle-buttons/stepper-middle-buttons.component';
+// Children
+import { AttacksTableContainerComponent } from './children/attacks-table-container/attacks-table-container.component';
+import { StringsTableContainerComponent } from './children/strings-table-container/strings-table-container.component';
+import { ProficienciesTableContainerComponent } from './children/proficiencies-table-container/proficiencies-table-container.component';
+import { EquipmentTableContainerComponent } from './children/equipment-table-container/equipment-table-container.component';
+import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons/stepper-middle-buttons.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { StepperMiddleButtonsComponent } from './shared/components/stepper-middl
     AddProficiencyDialogComponent,
     AddEquipmentDialogComponent,
     RemoveCharacterDialogComponent,
-    // Shared
+    // Children
     AttacksTableContainerComponent,
     StringsTableContainerComponent,
     ProficienciesTableContainerComponent,

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { MatDialog, MatTable } from '@angular/material';
-import { Attack } from '../../entities/attack';
-import { AttacksEqualsHelper } from '../../helpers/equals-helpers/attacksEqualsHelper';
+import { Attack } from 'src/app/shared/entities/attack';
+import { AttacksEqualsHelper } from 'src/app/shared/helpers/equals-helpers/attacksEqualsHelper';
 import { AddAttackDialogComponent } from 'src/app/dialogs/add-attack-dialog/add-attack-dialog.component';
 
 @Component({
