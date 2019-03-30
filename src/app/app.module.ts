@@ -31,6 +31,7 @@ import { CharacterNameFormComponent } from './children/forms/character-name-form
 import { CharacterGameStateFormComponent } from './children/forms/character-game-state-form/character-game-state-form.component';
 import { CharacterDescriptionFormComponent } from './children/forms/character-description-form/character-description-form.component';
 import { CharacterCharacteristicsFormComponent } from './children/forms/character-characteristics-form/character-characteristics-form.component';
+import { CharacterSkillsFormComponent } from './children/forms/character-skills-form/character-skills-form.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { CharacterCharacteristicsFormComponent } from './children/forms/characte
     CharacterNameFormComponent,
     CharacterGameStateFormComponent,
     CharacterDescriptionFormComponent,
-    CharacterCharacteristicsFormComponent
+    CharacterCharacteristicsFormComponent,
+    CharacterSkillsFormComponent
   ],
   entryComponents: [
     // Dialogs
