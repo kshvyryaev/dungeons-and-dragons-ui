@@ -26,7 +26,7 @@ import { AttacksTableContainerComponent } from './children/table-containers/atta
 import { StringsTableContainerComponent } from './children/table-containers/strings-table-container/strings-table-container.component';
 import { ProficienciesTableContainerComponent } from './children/table-containers/proficiencies-table-container/proficiencies-table-container.component';
 import { EquipmentTableContainerComponent } from './children/table-containers/equipment-table-container/equipment-table-container.component';
-import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons/stepper-middle-buttons.component';
+import { StepperMiddleButtonsComponent } from './children/buttons/stepper-middle-buttons/stepper-middle-buttons.component';
 import { CharacterNameFormComponent } from './children/forms/character-name-form/character-name-form.component';
 import { CharacterGameStateFormComponent } from './children/forms/character-game-state-form/character-game-state-form.component';
 import { CharacterDescriptionFormComponent } from './children/forms/character-description-form/character-description-form.component';
