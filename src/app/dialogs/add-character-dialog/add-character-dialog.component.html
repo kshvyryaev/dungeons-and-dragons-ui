@@ -51,53 +51,9 @@
     </mat-step>
 
     <mat-step [stepControl]="sixthStepForm">
-      <form [formGroup]="sixthStepForm">
-        <ng-template matStepLabel>Физическое состояние</ng-template>
-        <div class="form-field-container">
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Класс доспеха" type="number" formControlName="armorClass"
-              [(ngModel)]="character.physicalState.armorClass" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Инициатива" type="number" formControlName="initiative"
-              [(ngModel)]="character.physicalState.initiative" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Скорость" type="number" formControlName="speed"
-              [(ngModel)]="character.physicalState.speed" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Максимальное здоровье" type="number" formControlName="maxHitPoints"
-              [(ngModel)]="character.physicalState.maxHitPoints" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Текущее зоровье" type="number" formControlName="currentHitPoints"
-              [(ngModel)]="character.physicalState.currentHitPoints">
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Временное здоровье" type="number" formControlName="temporaryHitPoints"
-              [(ngModel)]="character.physicalState.temporaryHitPoints">
-          </mat-form-field>
-
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Тип костей очков здоровья" formControlName="hitDiceType"
-              [(ngModel)]="character.physicalState.hitDice.type" required>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Число костей очков здоровья" type="number" formControlName="hitDiceTotal"
-              [(ngModel)]="character.physicalState.hitDice.total" required>
-          </mat-form-field>
-
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Число успешных бросков" type="number" formControlName="successes"
-              [(ngModel)]="character.physicalState.deathSaves.successes">
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Число неудачных бросков" type="number" formControlName="failures"
-              [(ngModel)]="character.physicalState.deathSaves.failures">
-          </mat-form-field>
-        </div>
-      </form>
+      <app-character-physical-state-form
+        [formGroup]="sixthStepForm" [(physicalState)]="character.physicalState">
+      </app-character-physical-state-form>
       
       <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
