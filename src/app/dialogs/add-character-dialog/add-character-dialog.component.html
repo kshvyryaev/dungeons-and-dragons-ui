@@ -4,18 +4,13 @@
   <mat-vertical-stepper [linear]="true" #stepper>
     
     <mat-step [stepControl]="firstStepForm">
-      <form [formGroup]="firstStepForm">
-        <ng-template matStepLabel>Имя персонажа</ng-template>
-        <div class="form-field-container">
-          <mat-form-field class="form-field">
-            <input matInput placeholder="Имя персонажа" [(ngModel)]="character.name" formControlName="name" required>
-          </mat-form-field>
-        </div>
-        <div class="form-button-container">
-          <button class="form-button_margin" mat-button (click)="cancel()">Отмена</button>
-          <button class="form-button_margin" mat-raised-button color="primary" matStepperNext>Далее</button>
-        </div>
-      </form>
+      <app-character-name-form [form]="firstStepForm" [(name)]="character.name">
+      </app-character-name-form>
+
+      <div class="form-button-container">
+        <button class="form-button_margin" mat-button (click)="cancel()">Отмена</button>
+        <button class="form-button_margin" mat-raised-button color="primary" matStepperNext>Далее</button>
+      </div>
     </mat-step>
 
     <mat-step [stepControl]="secondStepForm">
@@ -47,8 +42,9 @@
               [(ngModel)]="character.gameState.experiencePoints">
           </mat-form-field>
         </div>
-        <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
       </form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
 
     <mat-step [stepControl]="thirdStepForm">
@@ -76,8 +72,9 @@
             </textarea>
           </mat-form-field>
         </div>
-        <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
       </form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
     
     <mat-step [stepControl]="fourthStepForm">
@@ -123,8 +120,9 @@
               [(ngModel)]="character.passiveWisdom" required>
           </mat-form-field>
         </div>
-        <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
       </form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
 
     <mat-step [stepControl]="fifthStepForm">
@@ -275,8 +273,9 @@
               [(ngModel)]="character.skills.survival" required>
           </mat-form-field>
         </div>
-        <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
       </form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
 
     <mat-step [stepControl]="sixthStepForm">
@@ -326,8 +325,9 @@
               [(ngModel)]="character.physicalState.deathSaves.failures">
           </mat-form-field>
         </div>
-        <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
       </form>
+      
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
 
     <mat-step>
@@ -375,7 +375,6 @@
       <div class="form-button-container">
         <button class="form-button_margin" mat-button (click)="cancel()">Отмена</button>
         <button class="form-button_margin" mat-button matStepperPrevious>Назад</button>
-        <button class="form-button_margin" mat-button (click)="stepper.reset()">Сбросить</button>
         <button class="form-button_margin" mat-raised-button color="primary"
           (click)="addCharacter()" [disabled]="!availabeToAddCharacter()">Добавить</button>
       </div>

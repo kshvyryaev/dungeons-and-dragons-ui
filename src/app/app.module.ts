@@ -27,6 +27,7 @@ import { StringsTableContainerComponent } from './children/strings-table-contain
 import { ProficienciesTableContainerComponent } from './children/proficiencies-table-container/proficiencies-table-container.component';
 import { EquipmentTableContainerComponent } from './children/equipment-table-container/equipment-table-container.component';
 import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons/stepper-middle-buttons.component';
+import { CharacterNameFormComponent } from './children/forms/character-name-form/character-name-form.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons
     StringsTableContainerComponent,
     ProficienciesTableContainerComponent,
     EquipmentTableContainerComponent,
-    StepperMiddleButtonsComponent
+    StepperMiddleButtonsComponent,
+    CharacterNameFormComponent    
   ],
   entryComponents: [
     // Dialogs
