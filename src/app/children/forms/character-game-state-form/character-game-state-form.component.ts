@@ -9,7 +9,7 @@ import { GameState } from 'src/app/shared/entities/gameState';
 })
 export class CharacterGameStateFormComponent implements OnInit {
 
-  @Input() form: FormGroup;
+  @Input() formGroup: FormGroup;
   @Input() gameState: GameState;
   @Output() gameStateChange = new EventEmitter<GameState>();
 

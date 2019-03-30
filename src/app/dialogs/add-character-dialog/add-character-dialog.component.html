@@ -5,7 +5,7 @@
     
     <mat-step [stepControl]="firstStepForm">
       <app-character-name-form
-        [form]="firstStepForm" [(name)]="character.name">
+        [formGroup]="firstStepForm" [(name)]="character.name">
       </app-character-name-form>
 
       <div class="form-button-container">
@@ -16,38 +16,16 @@
 
     <mat-step [stepControl]="secondStepForm">
       <app-character-game-state-form
-        [form]="secondStepForm" [(gameState)]="character.gameState">
+        [formGroup]="secondStepForm" [(gameState)]="character.gameState">
       </app-character-game-state-form>
 
       <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>
 
     <mat-step [stepControl]="thirdStepForm">
-      <form [formGroup]="thirdStepForm">
-        <ng-template matStepLabel>Описание персонажа</ng-template>
-        <div class="form-field-container">
-          <mat-form-field class="form-field">
-            <textarea matInput placeholder="Черты характера" formControlName="personalityTraits"
-              [(ngModel)]="character.characterDescription.personalityTraits">
-            </textarea>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <textarea matInput placeholder="Идеалы" formControlName="ideals"
-              [(ngModel)]="character.characterDescription.ideals">
-            </textarea>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <textarea matInput placeholder="Привязанности" formControlName="bonds"
-              [(ngModel)]="character.characterDescription.bonds">
-            </textarea>
-          </mat-form-field>
-          <mat-form-field class="form-field">
-            <textarea matInput placeholder="Слабости" formControlName="flaws"
-              [(ngModel)]="character.characterDescription.flaws">
-            </textarea>
-          </mat-form-field>
-        </div>
-      </form>
+      <app-character-description-form
+        [formGroup]="thirdStepForm" [(characterDescription)]="character.characterDescription">
+      </app-character-description-form>
 
       <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
     </mat-step>

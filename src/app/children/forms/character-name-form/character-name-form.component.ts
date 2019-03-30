@@ -9,7 +9,7 @@ import { CharacterFormFactory } from 'src/app/shared/factories/form-factories/ch
 })
 export class CharacterNameFormComponent implements OnInit {
 
-  @Input() form: FormGroup;
+  @Input() formGroup: FormGroup;
   @Input() name: string;
   @Output() nameChange = new EventEmitter<string>();
 

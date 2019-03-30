@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup">
+  <ng-template matStepLabel>Описание персонажа</ng-template>
+  <div class="form-field-container">
+    <mat-form-field class="form-field">
+      <textarea matInput placeholder="Черты характера" formControlName="personalityTraits"
+        [ngModel]="characterDescription.personalityTraits" (ngModelChange)="onPersonalityTraitsChange($event)">
+      </textarea>
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <textarea matInput placeholder="Идеалы" formControlName="ideals"
+        [ngModel]="characterDescription.ideals" (ngModelChange)="onIdealsChange($event)">
+      </textarea>
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <textarea matInput placeholder="Привязанности" formControlName="bonds"
+        [ngModel]="characterDescription.bonds" (ngModelChange)="onBondsChange($event)">
+      </textarea>
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <textarea matInput placeholder="Слабости" formControlName="flaws"
+        [ngModel]="characterDescription.flaws" (ngModelChange)="onFlawsChange($event)">
+      </textarea>
+    </mat-form-field>
+  </div>
+</form>

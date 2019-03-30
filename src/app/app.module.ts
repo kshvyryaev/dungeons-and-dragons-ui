@@ -29,6 +29,7 @@ import { EquipmentTableContainerComponent } from './children/equipment-table-con
 import { StepperMiddleButtonsComponent } from './children/stepper-middle-buttons/stepper-middle-buttons.component';
 import { CharacterNameFormComponent } from './children/forms/character-name-form/character-name-form.component';
 import { CharacterGameStateFormComponent } from './children/forms/character-game-state-form/character-game-state-form.component';
+import { CharacterDescriptionFormComponent } from './children/forms/character-description-form/character-description-form.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { CharacterGameStateFormComponent } from './children/forms/character-game
     EquipmentTableContainerComponent,
     StepperMiddleButtonsComponent,
     CharacterNameFormComponent,
-    CharacterGameStateFormComponent
+    CharacterGameStateFormComponent,
+    CharacterDescriptionFormComponent
   ],
   entryComponents: [
     // Dialogs
