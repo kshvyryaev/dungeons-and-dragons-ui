@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CharactersPageComponent } from './characters-page/characters-page.component';
-import { CharacterPageComponent } from './character-page/character-page.component';
+import { CharactersPageComponent } from './parents/characters-page/characters-page.component';
+import { CharacterPageComponent } from './parents/character-page/character-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'characters', pathMatch: 'full' },

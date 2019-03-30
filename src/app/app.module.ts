@@ -9,9 +9,9 @@ import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 
 // Parents
-import { CharactersPageComponent } from './characters-page/characters-page.component';
-import { CharacterPageComponent } from './character-page/character-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { CharactersPageComponent } from './parents/characters-page/characters-page.component';
+import { CharacterPageComponent } from './parents/character-page/character-page.component';
+import { NavbarComponent } from './parents/navbar/navbar.component';
 
 // Dialogs
 import { AddCharacterDialogComponent } from './dialogs/add-character-dialog/add-character-dialog.component';
