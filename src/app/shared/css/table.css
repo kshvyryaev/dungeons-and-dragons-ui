@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.elements-container {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1em;
+    align-items: center;
+}
+
+.button-container {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+}
+
+.table {
+    grid-column: span 12;
+}
+
+.table__td_overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table__button-margin {
+    margin: 2px;
+}
+
+.button-container__button_margin {
+    margin: 1em;
+}

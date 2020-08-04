@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup">
+  <ng-template matStepLabel>Игровое состояние</ng-template>
+  <div class="form-field-container">
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Класс" formControlName="class" required
+        [ngModel]="gameState.class" (ngModelChange)="onClassChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Уровень" type="number" formControlName="level" required
+        [ngModel]="gameState.level" (ngModelChange)="onLevelChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Предыстория" formControlName="background"
+        [ngModel]="gameState.background" (ngModelChange)="onBackgroundChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Фракция" formControlName="faction" required
+        [ngModel]="gameState.faction" (ngModelChange)="onFactionChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Раса" formControlName="race" required
+        [ngModel]="gameState.race" (ngModelChange)="onRaceChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Опыт" type="number" formControlName="experiencePoints"
+        [ngModel]="gameState.experiencePoints" (ngModelChange)="onExperiencePointsChange($event)">
+    </mat-form-field>
+  </div>
+</form>

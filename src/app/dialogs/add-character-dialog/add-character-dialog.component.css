@@ -1,0 +1,25 @@
+.form-field-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1em;
+    align-items: center;
+}
+
+.form-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-field {
+    grid-column: span 4;
+}
+
+.form-button_margin {
+    margin: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .form-field {
+        grid-column: span 12;
+    }
+}

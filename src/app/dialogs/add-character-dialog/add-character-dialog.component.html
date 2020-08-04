@@ -1,0 +1,112 @@
+<h1 mat-dialog-title>Создание персонажа</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <mat-vertical-stepper [linear]="true" #stepper>
+    
+    <mat-step [stepControl]="firstStepForm">
+      <app-character-name-form
+        [formGroup]="firstStepForm" [(name)]="character.name">
+      </app-character-name-form>
+
+      <div class="form-button-container">
+        <button class="form-button_margin" mat-button (click)="cancel()">Отмена</button>
+        <button class="form-button_margin" mat-raised-button color="primary" matStepperNext>Далее</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="secondStepForm">
+      <app-character-game-state-form
+        [formGroup]="secondStepForm" [(gameState)]="character.gameState">
+      </app-character-game-state-form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdStepForm">
+      <app-character-description-form
+        [formGroup]="thirdStepForm" [(characterDescription)]="character.characterDescription">
+      </app-character-description-form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+    
+    <mat-step [stepControl]="fourthStepForm">
+      <app-character-characteristics-form
+        [formGroup]="fourthStepForm"
+        [(characteristics)]="character.characteristics"
+        [(inspiration)]="character.inspiration"
+        [(proficiencyBonus)]="character.proficiencyBonus"
+        [(passiveWisdom)]="character.passiveWisdom">
+      </app-character-characteristics-form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step [stepControl]="fifthStepForm">
+      <app-character-skills-form
+        [formGroup]="fifthStepForm" [(skills)]="character.skills">
+      </app-character-skills-form>
+
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step [stepControl]="sixthStepForm">
+      <app-character-physical-state-form
+        [formGroup]="sixthStepForm" [(physicalState)]="character.physicalState">
+      </app-character-physical-state-form>
+      
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Добавлние атак</ng-template>
+      <app-attacks-table-container [attacks]="character.attacks"></app-attacks-table-container>
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Добавлние навыков</ng-template>
+      <app-proficiencies-table-container
+        [proficiencies]="character.proficiencies">
+      </app-proficiencies-table-container>
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Добавлние языков</ng-template>
+      <app-strings-table-container
+        [elements]="character.languages"
+        [addStringDialogTitle]="LANGUAGES_ADD_STRING_DIALOG_TITLE">
+      </app-strings-table-container>
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Добавлние особенностей</ng-template>
+      <app-strings-table-container
+        [elements]="character.features"
+        [addStringDialogTitle]="FEATURES_ADD_STRING_DIALOG_TITLE">
+      </app-strings-table-container>
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Добавлние снаряжения</ng-template>
+      <app-equipment-table-container
+        [equipment]="character.equipment">
+      </app-equipment-table-container>
+      <app-stepper-middle-buttons (onCanceled)="cancel()"></app-stepper-middle-buttons>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Добавление</ng-template>
+      <div class="form-button-container">
+        <button class="form-button_margin" mat-button (click)="cancel()">Отмена</button>
+        <button class="form-button_margin" mat-button matStepperPrevious>Назад</button>
+        <button class="form-button_margin" mat-raised-button color="primary"
+          (click)="addCharacter()" [disabled]="!availabeToAddCharacter()">Добавить</button>
+      </div>
+    </mat-step>
+
+  </mat-vertical-stepper>
+</div>

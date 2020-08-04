@@ -1,0 +1,47 @@
+<form [formGroup]="formGroup">
+  <ng-template matStepLabel>Физическое состояние</ng-template>
+  <div class="form-field-container">
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Класс доспеха" type="number" formControlName="armorClass" required
+        [ngModel]="physicalState.armorClass" (ngModelChange)="onArmorClassChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Инициатива" type="number" formControlName="initiative" required
+        [ngModel]="physicalState.initiative" (ngModelChange)="onInitiativeChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Скорость" type="number" formControlName="speed" required
+        [ngModel]="physicalState.speed" (ngModelChange)="onSpeedChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Максимальное здоровье" type="number" formControlName="maxHitPoints" required
+        [ngModel]="physicalState.maxHitPoints" (ngModelChange)="onMaxHitPointsChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Текущее зоровье" type="number" formControlName="currentHitPoints"
+        [ngModel]="physicalState.currentHitPoints" (ngModelChange)="onCurrentHitPointsChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Временное здоровье" type="number" formControlName="temporaryHitPoints"
+        [ngModel]="physicalState.temporaryHitPoints" (ngModelChange)="onTemporaryHitPointsChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Тип костей очков здоровья" formControlName="hitDiceType" required
+        [ngModel]="physicalState.hitDice.type" (ngModelChange)="onTypeChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Число костей очков здоровья" type="number" formControlName="hitDiceTotal" required
+        [ngModel]="physicalState.hitDice.total" (ngModelChange)="onTotalChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Число успешных бросков" type="number" formControlName="successes"
+        [ngModel]="physicalState.deathSaves.successes" (ngModelChange)="onSuccessesChange($event)">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Число неудачных бросков" type="number" formControlName="failures"
+        [ngModel]="physicalState.deathSaves.failures" (ngModelChange)="onFailuresChange($event)">
+    </mat-form-field>
+  </div>
+</form>

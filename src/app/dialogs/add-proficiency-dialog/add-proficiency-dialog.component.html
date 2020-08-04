@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Добавление навыка</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <form [formGroup]="proficiencyForm">
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Название" [(ngModel)]="proficiency.name"
+        formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field_full-width">
+      <input matInput placeholder="Описание" [(ngModel)]="proficiency.description"
+        formControlName="description">
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button class="dialog-actions__button_margin" mat-button mat-dialog-close>Отмена</button>
+  <button class="dialog-actions__button_margin" mat-raised-button color="primary"
+    (click)="addProficiency()" [disabled]="!proficiencyForm.valid">Добавить</button>
+</div>

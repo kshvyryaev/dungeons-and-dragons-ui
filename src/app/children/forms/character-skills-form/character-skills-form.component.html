@@ -1,0 +1,148 @@
+<form [formGroup]="formGroup">
+  <ng-template matStepLabel>Навыки</ng-template>
+  <div class="form-field-container">
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasAcrobaticsMasteryChange()">
+        {{skills.hasAcrobaticsMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Акробатика" type="number" formControlName="acrobatics" required
+        [ngModel]="skills.acrobatics" (ngModelChange)="onAcrobaticsChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onAnimalHandlingChange()">
+        {{skills.hasAnimalHandlingMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Уход за животными" type="number" formControlName="animalHandling" required
+        [ngModel]="skills.animalHandling" (ngModelChange)="onAnimalHandlingChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasArcanaMasteryChange()">
+        {{skills.hasArcanaMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Магия" type="number" formControlName="arcana" required
+        [ngModel]="skills.arcana" (ngModelChange)="onArcanaChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasAthleticsMasteryChange()">
+        {{skills.hasAthleticsMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Атлетика" type="number" formControlName="athletics" required
+        [ngModel]="skills.athletics" (ngModelChange)="onAthleticsChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasDeceptionMasteryChange()">
+        {{skills.hasDeceptionMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Обман" type="number" formControlName="deception" required
+        [ngModel]="skills.deception" (ngModelChange)="onDeceptionChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasHistoryMasteryChange()">
+        {{skills.hasHistoryMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="История" type="number" formControlName="history" required
+        [ngModel]="skills.history" (ngModelChange)="onHistoryChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasInsightMasteryChange()">
+        {{skills.hasInsightMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Проницательность" type="number" formControlName="insight" required
+        [ngModel]="skills.insight" (ngModelChange)="onInsightChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasIntimidationMasteryChange()">
+        {{skills.hasIntimidationMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Запугивание" type="number" formControlName="intimidation" required
+        [ngModel]="skills.intimidation" (ngModelChange)="onIntimidationChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasInvestigationMasteryChange()">
+        {{skills.hasInvestigationMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Анализ" type="number" formControlName="investigation" required
+        [ngModel]="skills.investigation" (ngModelChange)="onInvestigationChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasMedicineMasteryChange()">
+        {{skills.hasMedicineMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Медицина" type="number" formControlName="medicine" required
+        [ngModel]="skills.medicine" (ngModelChange)="onMedicineChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasNatureMasteryChange()">
+        {{skills.hasNatureMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Природа" type="number" formControlName="nature" required
+        [ngModel]="skills.nature" (ngModelChange)="onNatureChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasPerceptionMasteryChange()">
+        {{skills.hasPerceptionMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Внимательность" type="number" formControlName="perception" required
+        [ngModel]="skills.perception" (ngModelChange)="onPerceptionChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasPerformanceMasteryChange()">
+        {{skills.hasPerformanceMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Выступление" type="number" formControlName="performance" required
+        [ngModel]="skills.performance" (ngModelChange)="onPerformanceChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasPersuasionMasteryChange()">
+        {{skills.hasPersuasionMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Убеждение" type="number" formControlName="persuasion" required
+        [ngModel]="skills.persuasion" (ngModelChange)="onPersuasionChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasReligionMasteryChange()">
+        {{skills.hasReligionMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Религия" type="number" formControlName="religion" required
+        [ngModel]="skills.religion" (ngModelChange)="onReligionChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasSleightOfHandMasteryChange()">
+        {{skills.hasSleightOfHandMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Ловкость рук" type="number" formControlName="sleightOfHand" required
+        [ngModel]="skills.sleightOfHand" (ngModelChange)="onSleightOfHandChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasStealthMasteryChange()">
+        {{skills.hasStealthMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Скрытность" type="number" formControlName="stealth" required
+        [ngModel]="skills.stealth" (ngModelChange)="onStealthChange($event)">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-icon matPrefix (click)="onHasSurvivalMasteryChange()">
+        {{skills.hasSurvivalMastery ? 'grade' : 'touch_app'}}
+      </mat-icon>
+      <input matInput placeholder="Выживание" type="number" formControlName="survival" required
+        [ngModel]="skills.survival" (ngModelChange)="onSurvivalChange($event)">
+    </mat-form-field>
+  </div>
+</form>

@@ -1,0 +1,12 @@
+.dialog-content {
+    text-align: center;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog-actions__button_margin {
+    margin: 1em;
+}

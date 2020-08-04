@@ -1,0 +1,32 @@
+.wrapper {
+    margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2em;
+}
+
+.add-container {
+    grid-column: span 12;
+}
+
+.add-container_center {
+    justify-self: center;
+    align-self: center;
+}
+
+.table-container {
+    grid-column: span 12;
+}
+
+.table_full-width {
+    width: 100%;
+}
+
+.table__td_overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table__button-margin {
+    margin: 2px;
+}

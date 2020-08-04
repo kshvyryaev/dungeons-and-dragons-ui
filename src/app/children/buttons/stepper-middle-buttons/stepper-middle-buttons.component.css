@@ -1,0 +1,8 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button_margin {
+    margin: 1em;
+}
